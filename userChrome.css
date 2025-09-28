@@ -1,0 +1,78 @@
+/* === Firefox Tab Styling === */
+
+/* Square corners */
+.tabbrowser-tab {
+  border-radius: 0 !important;
+  font-size: 13px !important;
+}
+
+/* Selected tab */
+.tabbrowser-tab[selected="true"] {
+  background-color: #2b2b2b !important;
+  color: #ffffff !important;
+  font-weight: bold !important;
+}
+
+/* Unselected tabs */
+.tabbrowser-tab:not([selected="true"]) {
+  background-color: #333 !important;
+  color: #bbb !important;
+}
+
+/* Hover effect */
+.tabbrowser-tab:hover {
+  background-color: #555 !important;
+  color: #fff !important;
+}
+
+
+/* Style the tab group label text */
+.tab-group-label {
+  font-size: 13px !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  color: #efefef !important;         /* yellow00*/
+  background:none !important; /* dark background */
+  padding: 2px 6px !important;
+  border-radius: 0 !important;
+}
+
+/* Optional: tweak the container box */
+.tab-group-label-container {
+  margin: 0 4px !important;
+}
+
+
+/* Remove the default border around collapsed tab group titles */
+.tab-group-label {
+  text-transform: lowercase !important;
+  outline:none !important;
+  border: none !important;
+  box-shadow: none !important;   /* also removes any subtle outline */
+  background-color: transparent !important; /* optional: makes it blend */
+  padding: 2px 6px !important;   /* keep spacing */
+  display:flex !important;
+  align-items: center;
+  align-content: center;
+
+}
+
+.tab-group-label[aria-expanded="false"] {
+
+  opacity: .5;
+}
+
+tab-group .tab-group-label::before {
+  content: "" !important;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 4px;
+  mask-image:  url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNjQwIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDcuMC4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjUgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTEyOCA1MTJMNTEyIDUxMkM1NDcuMyA1MTIgNTc2IDQ4My4zIDU3NiA0NDhMNTc2IDIwOEM1NzYgMTcyLjcgNTQ3LjMgMTQ0IDUxMiAxNDRMMzYyLjcgMTQ0QzM1NS44IDE0NCAzNDkgMTQxLjggMzQzLjUgMTM3LjZMMzA1LjEgMTA4LjhDMjk0IDEwMC41IDI4MC41IDk2IDI2Ni43IDk2TDEyOCA5NkM5Mi43IDk2IDY0IDEyNC43IDY0IDE2MEw2NCA0NDhDNjQgNDgzLjMgOTIuNyA1MTIgMTI4IDUxMnoiLz48L3N2Zz4=");
+  mask-repeat:no-repeat;
+  mask-position:50% 50%;
+  mask-size: 80%;
+  background-color:#ffbb22;
+  background-position: 50% 50%;
+}
+
